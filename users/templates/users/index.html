@@ -1,0 +1,9 @@
+{% if latest_get_list %}
+    <ul>
+    {% for question in latest_get_list %}
+        <li><a href="/users/{{ get.id }}/">{{ get.first_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No gets are available.</p>
+{% endif %}
