@@ -19,7 +19,7 @@ from django.urls import include, path
 #from users.views import (MemberList, MemberDetail)
 
 urlpatterns = [
-    #path('users/', include('users.urls')),
+    path('api/', include('users.urls')),
     path('', admin.site.urls),
    
     
