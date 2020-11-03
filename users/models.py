@@ -1,8 +1,8 @@
 from django.db import models
 
 # Create your models here.
-class Get(models.Model):
-    id = models.AutoField(primary_key=True)
+class Member(models.Model):
+    
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     company_name = models.CharField(max_length=200)

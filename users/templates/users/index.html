@@ -7,3 +7,9 @@
 {% else %}
     <p>No gets are available.</p>
 {% endif %}
+{% for contact in page_obj %}
+    {# Each "contact" is a Contact model object. #}
+    {{ contact.full_name|upper }}<br>
+    ...
+{% endfor %}
+
