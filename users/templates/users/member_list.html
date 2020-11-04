@@ -1,7 +1,17 @@
-{% for member in object_list %}
-id - {{member.id}}<br> first_name - {{member.first_name}}<br> last_name - {{member.last_name}}<br>
-company_name - {{member.company_name}}<br> 
-city - {{member.city}}<br> state - {{member.state}}<br> zip - {{member.zip}}<br> .email - {{member.email}}<br>
-web - {{member.web}}<br> 
-age - {{member.age}}<br><br>
-{% endfor %} 
+<body style="background-color:black;">
+
+<txt style="color:white;">[<br></txt>{% for member in object_list %}
+<txt style="color:white;"><pre>   {</pre> <span style="margin-left:3em"></span> "id" : </txt> <txt style="color:red;">{{member.id}}</txt>
+<txt style="color:white;">,<br><span style="margin-left:3em"></span>"first_name" : </txt><txt style="color:green;">"{{member.first_name}}"</txt>
+<txt style="color:white;"> ,<br><span style="margin-left:3em"></span>"last_name" : </txt><txt style="color:green;">>"{{member.last_name}}"</txt>
+<txt style="color:white;">,<br><span style="margin-left:3em"></span>"company_name" : </txt><txt style="color:green;">"{{member.company_name}}"</txt> 
+<txt style="color:white;">,<br><span style="margin-left:3em"></span>"city" : </txt><txt style="color:green;">"{{member.city}}"</txt>
+<txt style="color:white;">,<br><span style="margin-left:3em"></span> "state" : </txt><txt style="color:green;">"{{member.state}}"</txt>
+<txt style="color:white;">,<br><span style="margin-left:3em"></span> "zip" : </txt><txt style="color:red;">{{member.zip}}</txt>
+<txt style="color:white;">,<br><span style="margin-left:3em"></span>"email" : </txt><txt style="color:green;">"{{member.email}}"</txt>
+<txt style="color:white;">,<br><span style="margin-left:3em"></span>"web" : </txt><txt style="color:green;">"{{member.web}}"</txt> 
+<txt style="color:white;">,<br><span style="margin-left:3em"></span>"age" : </txt><txt style="color: red;">{{member.age}}<br></txt>
+<txt style="color:white;"><pre>   },</pre><br></txt>
+{% endfor %}<txt style="color:white;"> ]</txt>
+
+</body>

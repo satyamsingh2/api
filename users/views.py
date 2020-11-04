@@ -11,6 +11,7 @@ class MemberCreate(CreateView):
     template_name='users/create.html'
     queryset=Member.objects.all()
     form_class = MemberModelForm
+    success_url='/api/users/'
   
 
     
@@ -42,7 +43,7 @@ class MemberUpdate(UpdateView):
     template_name='users/create.html'
     queryset=Member.objects.all()
     form_class = MemModelForm
-    success_url='/HttpResponse(status=201)/' 
+    success_url='/api/users/' 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         #context.save()
@@ -52,6 +53,7 @@ class MemberDelete(DeleteView):
     model=Member
     template_name = 'users/delete.html'
     context_object_name='first_name'
+    success_url='/api/users/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
