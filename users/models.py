@@ -1,5 +1,7 @@
 from django.db import models
 
+
+
 # Create your models here.
 class Member(models.Model):
     
@@ -9,13 +11,14 @@ class Member(models.Model):
     city = models.CharField(max_length=200)
     state = models.CharField(max_length=200)
     zip = models.IntegerField()
-    email = models.CharField(max_length=200)
+    email = models.EmailField(max_length=200)#changes
     web = models.CharField(max_length=200)
     age = models.IntegerField()
     
 
     def __str__(self):
         return self.first_name
-        
+
+    
     
 

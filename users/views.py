@@ -3,8 +3,9 @@ from .models import Member
 from django.views.generic import (CreateView, ListView, DetailView, UpdateView, DeleteView)
 from .forms import MemberModelForm, MemModelForm
 #from django.core.paginator import Paginator
-from django.http import HttpResponse
+
 # Create your views here.
+
 
 
 class MemberCreate(CreateView):
@@ -12,9 +13,7 @@ class MemberCreate(CreateView):
     queryset=Member.objects.all()
     form_class = MemberModelForm
     success_url='/api/users/'
-  
-
-    
+       
 class MemberList(ListView):
     model = Member
     
@@ -33,20 +32,19 @@ class MemberDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        #context.save()
+        
         return context
 
 
 class MemberUpdate(UpdateView):
-    #model = Member
-    #fields= ['first_name', 'last_name', 'age']  
+    
     template_name='users/create.html'
     queryset=Member.objects.all()
     form_class = MemModelForm
     success_url='/api/users/' 
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        #context.save()
         return context
 
 class MemberDelete(DeleteView):
@@ -57,5 +55,5 @@ class MemberDelete(DeleteView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        #context.save()
+        
         return context

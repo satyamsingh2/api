@@ -8,7 +8,7 @@ urlpatterns = [
     #path('', views.index, name='index'),
     
     path('users/<int:pk>/', MemberDetail.as_view(), name='detail'),
-    path('users/', MemberList.as_view()),
+    path('users/', MemberList.as_view(),name='users'),
     path('users/update/<int:pk>/', MemberUpdate.as_view(), name='update'),
     path('users/create/', MemberCreate.as_view(), name='member-create'),
     path('users/delete/<int:pk>/', MemberDelete.as_view(), name='delete'),

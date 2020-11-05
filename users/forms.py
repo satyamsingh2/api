@@ -3,6 +3,7 @@ from django import forms
   
 # import GeeksModel from models.py 
 from .models import Member
+
   
 # create a ModelForm 
 class MemberModelForm(forms.ModelForm): 
@@ -10,6 +11,8 @@ class MemberModelForm(forms.ModelForm):
     class Meta: 
         model = Member
         fields = "__all__"
+
+    
 
 class MemModelForm(forms.ModelForm): 
     # specify the name of model to use 
